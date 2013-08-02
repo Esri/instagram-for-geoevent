@@ -6,7 +6,6 @@ ArcGIS GeoEvent Processor Sample Instagram Inbound Connector for receiving Insta
 
 ## Features
 * Instagram Inbound Adapter
-* Instagram Inbound Transport
 
 ## Instructions
 
