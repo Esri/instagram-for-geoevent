@@ -1,0 +1,148 @@
+<adapter name="Instagram" label="Instagram Inbound Adapter" domain="com.esri.ges.adapter.inbound" type="inbound">
+	<description>This adapter is capable of receiving/parsing Instagram data in the JSON format.</description>
+	<geoEventDefinitions>
+		<geoEventDefinition name="Instagram">
+
+			<fieldDefinitions>
+				<fieldDefinition name="attribution" type="Group">
+				
+					<fieldDefinitions>
+						<fieldDefinition name="website" type="String" />
+						<fieldDefinition name="itunes_url" type="String" />
+						<fieldDefinition name="name" type="String" />
+					</fieldDefinitions> 
+					
+				</fieldDefinition>
+				<fieldDefinition name="tags" type="String" cardinality="Many" />
+				<fieldDefinition name="type" type="String" />
+				<fieldDefinition name="location" type="Group">
+				
+					<fieldDefinitions>
+						<fieldDefinition name="latitude" type="Double" />
+						<fieldDefinition name="longitude" type="Double" />
+						<fieldDefinition name="name" type="String" />
+						<fieldDefinition name="id" type="Long" />
+					</fieldDefinitions>
+					
+				</fieldDefinition>
+				<fieldDefinition name="comments" type="Group">
+
+					<fieldDefinitions>
+						<fieldDefinition name="count" type="Integer" />
+						<fieldDefinition name="data" type="Group" cardinality="Many">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="created_time" type="String" />
+								<fieldDefinition name="text" type="String" />
+								<fieldDefinition name="from" type="Group"> 
+									<fieldDefinitions>
+										<fieldDefinition name="username" type="String" />
+										<fieldDefinition name="profile_picture" type="String" />
+										<fieldDefinition name="id" type="Long" />
+										<fieldDefinition name="full_name" type="String" />
+									</fieldDefinitions>
+								</fieldDefinition> <!-- from -->
+								<fieldDefinition name="id" type="Long" />
+							</fieldDefinitions>
+
+						</fieldDefinition> <!--  data -->
+					</fieldDefinitions>
+
+				</fieldDefinition>	
+				<fieldDefinition name="filter" type="String" />
+				<fieldDefinition name="created_time" type="String" />
+				<fieldDefinition name="link" type="String" />
+				<fieldDefinition name="likes" type="Group">
+
+					<fieldDefinitions>
+						<fieldDefinition name="count" type="Integer" />
+						<fieldDefinition name="data" type="Group" cardinality="Many">
+						
+							<fieldDefinitions>							
+								<fieldDefinition name="username" type="String" />
+								<fieldDefinition name="profile_picture" type="String" />
+								<fieldDefinition name="id" type="Long" />
+								<fieldDefinition name="full_name" type="String" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+					</fieldDefinitions>						
+
+				</fieldDefinition>
+				<fieldDefinition name="images" type="Group">
+				
+					<fieldDefinitions>
+						<fieldDefinition name="low_resolution" type="Group">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="url" type="String" />
+								<fieldDefinition name="width" type="Integer" />
+								<fieldDefinition name="height" type="Integer" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+						<fieldDefinition name="thumbnail" type="Group">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="url" type="String" />
+								<fieldDefinition name="width" type="Integer" />
+								<fieldDefinition name="height" type="Integer" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+						<fieldDefinition name="standard_resolution" type="Group">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="url" type="String" />
+								<fieldDefinition name="width" type="Integer" />
+								<fieldDefinition name="height" type="Integer" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+					</fieldDefinitions>
+					
+				</fieldDefinition>
+				<fieldDefinition name="caption" type="Group">
+
+					<fieldDefinitions>
+						<fieldDefinition name="created_time" type="String" />
+						<fieldDefinition name="text" type="String" />
+						<fieldDefinition name="from" type="Group"> 
+							<fieldDefinitions>
+								<fieldDefinition name="username" type="String" />
+								<fieldDefinition name="profile_picture" type="String" />
+								<fieldDefinition name="id" type="Long" />
+								<fieldDefinition name="full_name" type="String" />
+							</fieldDefinitions>
+						</fieldDefinition> <!-- from -->
+						<fieldDefinition name="id" type="Long" />
+					</fieldDefinitions>
+					
+				</fieldDefinition>
+				<fieldDefinition name="user_has_liked" type="Boolean" />
+				<fieldDefinition name="id" type="String" />
+				<fieldDefinition name="user" type="Group">
+				
+					<fieldDefinitions>
+						<fieldDefinition name="username" type="String" />
+						<fieldDefinition name="website" type="String" />
+						<fieldDefinition name="profile_picture" type="String" />
+						<fieldDefinition name="full_name" type="String" />
+						<fieldDefinition name="bio" type="String" />
+						<fieldDefinition name="id" type="Long" />
+						
+					</fieldDefinitions>
+					
+				</fieldDefinition>
+				
+				<fieldDefinition name="coordinates" type="Geometry">
+					<fieldDefinitionTag>
+						<name>GEOMETRY</name>
+					</fieldDefinitionTag>
+				</fieldDefinition>
+										
+			</fieldDefinitions>
+
+		</geoEventDefinition>
+	</geoEventDefinitions>
+</adapter>

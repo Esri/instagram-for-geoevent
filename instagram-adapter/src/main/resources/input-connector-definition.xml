@@ -1,0 +1,40 @@
+<connectorDefinition label="Receive Instagram feed"
+	name="receive-instagram-connector" type="inbound">
+	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.2.0"/>
+	<defaultName>instagram-in</defaultName>
+	<description>Connects to the public Instagram API and receives photo feeds.</description>
+	<properties>
+		<advanced>
+			<property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
+			<property default="true" label="Receive New Data Only" name="honorLastModified" source="transport"/>
+			<property default="https://api.instagram.com/v1/media/popular" label="URL" name="clientURL" source="transport"/>
+			<property default="Instagram" label="GeoEvent Definition Name" name="ExistingGeoEventDefinitionName" source="adapter"/>
+		</advanced>
+		<hidden>
+			<property default="" label="Well Known Text Geometry Field" name="WKTextGeometryField" source="adapter"/>
+			<property default="" label="wkid Geometry Field" name="WKIDGeometryField" source="adapter"/>
+			<property label="Acceptable MIME Types (Server Mode)" name="acceptableMimeTypesServerMode" source="transport"/>
+			<property default="false" label="Use URL Proxy" name="useClientURLProxy" source="transport"/>
+			<property label="URL Proxy" name="clientURLProxy" source="transport"/>
+			<property label="Content Body" name="clientPostBody" source="transport"/>
+			<property default="GET" label="HTTP Method" name="httpMethod" source="transport"/>
+			<property label="Post body MIME Type" name="postContentType" source="transport"/>
+			<property default="false" label="Use Long Polling" name="useLongPolling" source="transport"/>
+			<property default="" label="X Geometry Field" name="XGeometryField" source="adapter"/>
+			<property default="" label="Y Geometry Field" name="YGeometryField" source="adapter"/>
+			<property default="" label="Z Geometry Field" name="ZGeometryField" source="adapter"/>
+			<property default="false" label="Construct Geometry From Fields" name="BuildGeometryFromFields" source="adapter"/>
+			<property default="data" label="JSON Object Name" name="JsonObjectName" source="adapter"/>
+			<property default="InstagramDef" label="GeoEvent Definition Name (New)" name="NewGeoEventDefinitionName" source="adapter"/>			
+			<property default="false" label="Create GeoEvent Definition" name="CreateGeoEventDefinition" source="adapter"/>			
+			<property default="CLIENT" label="Mode" name="mode" source="transport"/>
+			<property default="" label="Expected Date Format" name="CustomDateFormat" source="adapter"/>
+			<property default="application/json" label="Acceptable MIME Types (Client Mode)" name="acceptableMimeTypesClientMode" source="transport"/>									
+		</hidden>
+		<shown>
+			<property default="client_id=Enter_client_id_here" label="Parameters" name="clientParameters" source="transport"/>
+		</shown>
+	</properties>
+
+	<transport uri="com.esri.ges.transport.inbound/HTTP/10.2.0"/>
+</connectorDefinition>
