@@ -30,11 +30,15 @@
 			<property default="CLIENT" label="Mode" name="mode" source="transport"/>
 			<property default="" label="Expected Date Format" name="CustomDateFormat" source="adapter"/>
 			<property default="application/json" label="Acceptable MIME Types (Client Mode)" name="acceptableMimeTypesClientMode" source="transport"/>									
+			<property default="" label="Parameters" name="clientParameters" source="transport"/>
 		</hidden>
 		<shown>
-			<property default="client_id=Enter_client_id_here" label="Parameters" name="clientParameters" source="transport"/>
+			<!--property default="client_id=Enter_client_id_here" label="Parameters" name="clientParameters" source="transport"/-->
+	        <property name="client_id" label="ClientId" source="transport" />
+	        <property name="client_secret" label="ClientSecret" source="transport" />
 		</shown>
 	</properties>
 
-	<transport uri="com.esri.ges.transport.inbound/HTTP/10.2.0"/>
+	<!--transport uri="com.esri.ges.transport.inbound/HTTP/10.2.0"/-->
+	<transport uri="com.esri.geoevent.transport/Instagram/10.2.0" />
 </connectorDefinition>

@@ -27,7 +27,7 @@ public class InstagramAdapterService extends AdapterServiceBase
   @Override
   public Adapter createAdapter() throws ComponentException 
   {
-    return new InstagramAdapter(definition);
+    return null;//new InstagramAdapter(definition);
   }
 
 }

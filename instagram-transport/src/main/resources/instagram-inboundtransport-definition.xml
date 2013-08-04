@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transport name="Instagram" domain="com.esri.ges.transport.inbound" type="inbound">
+	<description>Instagram Inbound HTTP Transport.</description>
+	<propertyDefinitions>
+        <propertyDefinition propertyName="client_id" label="ClientId" description="Client Id" propertyType="String" mandatory="true"  readOnly="false" defaultValue=""/>
+        <propertyDefinition propertyName="client_secret" label="ClientSecret" description="Client Secret" propertyType="String" mandatory="true"  readOnly="false" defaultValue=""/>
+	</propertyDefinitions>
+</transport>
