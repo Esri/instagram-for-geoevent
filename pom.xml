@@ -21,6 +21,7 @@
 
   <modules>
     <module>instagram-adapter</module>
+    <module>instagram-transport</module>
   </modules>
 
   <dependencyManagement>
