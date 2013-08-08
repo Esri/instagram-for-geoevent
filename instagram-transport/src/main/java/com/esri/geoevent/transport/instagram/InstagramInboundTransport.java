@@ -37,8 +37,9 @@ public class InstagramInboundTransport extends HttpInboundTransport
 {
   private static final Log logger = LogFactory.getLog(InstagramInboundTransport.class);
 
-  private String           clientId;
-  private String           clientSecret;
+  private String           accessToken;
+  private String           mediaType; 
+  private String           tagName;
 
   public InstagramInboundTransport(TransportDefinition definition) throws ComponentException
   {
@@ -94,23 +95,45 @@ public class InstagramInboundTransport extends HttpInboundTransport
 
   public void applyProperties() throws Exception
   {
-    if (getProperty("client_id").isValid())
+    if (getProperty("access_token").isValid())
     {
-      String value = (String) getProperty("client_id").getValue();
+      String value = (String) getProperty("access_token").getValue();
       if (value.length() > 0)
       {
-        clientId = value;
+        accessToken = value;
       }
     }
-    if (getProperty("client_secret").isValid())
+    if (getProperty("mediatype").isValid())
     {
-      String value = (String) getProperty("client_secret").getValue();
+      String value = (String) getProperty("mediatype").getValue();
       if (value.length() > 0)
       {
-        clientSecret = value;
+        mediaType = value;
       }
     }
-    clientUrl += "?client_id=" + clientId + "&client_secret=" + clientSecret;
+    if (mediaType.compareTo("Popular Media") == 0)
+    {
+      clientUrl += "/media/popular";
+    }
+    else if (mediaType.compareTo("My Media") == 0)
+    {
+      clientUrl += "/users/self/feed";
+    }
+    else if (mediaType.compareTo("Tagged Media") == 0)
+    {
+      if (getProperty("tag").isValid())
+      {
+        String value = (String) getProperty("tag").getValue();
+        if (value.length() > 0)
+        {
+          tagName = value;
+        }
+      }
+      
+      clientUrl += "/tags/" + tagName + "/media/recent";
+    }
+    
+    clientUrl += "?access_token=" + accessToken;
   }
 
   public static void consoleDebugPrintLn(String msg)

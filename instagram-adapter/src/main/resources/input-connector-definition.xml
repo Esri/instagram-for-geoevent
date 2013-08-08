@@ -4,12 +4,6 @@
 	<defaultName>instagram-in</defaultName>
 	<description>Connects to the public Instagram API and receives photo feeds.</description>
 	<properties>
-		<advanced>
-			<property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
-			<property default="true" label="Receive New Data Only" name="honorLastModified" source="transport"/>
-			<property default="https://api.instagram.com/v1/media/popular" label="URL" name="clientURL" source="transport"/>
-			<property default="Instagram" label="GeoEvent Definition Name" name="ExistingGeoEventDefinitionName" source="adapter"/>
-		</advanced>
 		<hidden>
 			<property default="" label="Well Known Text Geometry Field" name="WKTextGeometryField" source="adapter"/>
 			<property default="" label="wkid Geometry Field" name="WKIDGeometryField" source="adapter"/>
@@ -31,14 +25,17 @@
 			<property default="" label="Expected Date Format" name="CustomDateFormat" source="adapter"/>
 			<property default="application/json" label="Acceptable MIME Types (Client Mode)" name="acceptableMimeTypesClientMode" source="transport"/>									
 			<property default="" label="Parameters" name="clientParameters" source="transport"/>
+			<property default="true" label="Receive New Data Only" name="honorLastModified" source="transport"/>
+			<property default="https://api.instagram.com/v1" label="URL" name="clientURL" source="transport"/>
+			<property default="Instagram" label="GeoEvent Definition Name" name="ExistingGeoEventDefinitionName" source="adapter"/>
 		</hidden>
 		<shown>
-			<!--property default="client_id=Enter_client_id_here" label="Parameters" name="clientParameters" source="transport"/-->
-	        <property name="client_id" label="ClientId" source="transport" />
-	        <property name="client_secret" label="ClientSecret" source="transport" />
+	        <property name="access_token" label="Access Token" source="transport" />
+	        <property name="mediatype" label="Media Type" source="transport" />
+	        <property name="tag" label="Tag" source="transport" />
+	        <property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
 		</shown>
 	</properties>
 
-	<!--transport uri="com.esri.ges.transport.inbound/HTTP/10.2.0"/-->
 	<transport uri="com.esri.geoevent.transport/Instagram/10.2.0" />
 </connectorDefinition>

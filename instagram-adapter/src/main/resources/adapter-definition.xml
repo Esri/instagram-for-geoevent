@@ -102,6 +102,32 @@
 					</fieldDefinitions>
 					
 				</fieldDefinition>
+				
+				<fieldDefinition name="videos" type="Group">
+				
+					<fieldDefinitions>
+						<fieldDefinition name="low_resolution" type="Group">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="url" type="String" />
+								<fieldDefinition name="width" type="Integer" />
+								<fieldDefinition name="height" type="Integer" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+						<fieldDefinition name="standard_resolution" type="Group">
+						
+							<fieldDefinitions>
+								<fieldDefinition name="url" type="String" />
+								<fieldDefinition name="width" type="Integer" />
+								<fieldDefinition name="height" type="Integer" />
+							</fieldDefinitions>
+							
+						</fieldDefinition>
+					</fieldDefinitions>
+					
+				</fieldDefinition>
+				
 				<fieldDefinition name="caption" type="Group">
 
 					<fieldDefinitions>
