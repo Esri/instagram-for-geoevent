@@ -2,7 +2,7 @@
 <transport name="Instagram" domain="com.esri.ges.transport.inbound" type="inbound">
 	<description>Instagram Inbound HTTP Transport.</description>
 	<propertyDefinitions>
-        <propertyDefinition propertyName="access_token" label="Access Token" description="Access Token" propertyType="String" mandatory="true"  readOnly="false" defaultValue=""/>
+        <propertyDefinition propertyName="access_token" label="Access Token" description="Access Token" propertyType="Password" mandatory="true"  readOnly="false" defaultValue=""/>
         <propertyDefinition propertyName="mediatype" lable="Media Type" description="Media Type to receive from Instagram service" propertyType="String" mandatory="true" readOnly="false" defaultValue="Popular Media">
             <allowedValues>
                 <value>Popular Media</value>

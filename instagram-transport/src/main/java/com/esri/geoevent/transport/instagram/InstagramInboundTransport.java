@@ -100,7 +100,7 @@ public class InstagramInboundTransport extends HttpInboundTransport
       String value = (String) getProperty("access_token").getValue();
       if (value.length() > 0)
       {
-        accessToken = value;
+        accessToken = cryptoService.decrypt(value);
       }
     }
     if (getProperty("mediatype").isValid())
