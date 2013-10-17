@@ -1,6 +1,7 @@
 <connectorDefinition label="Receive Instagram feed"
 	name="receive-instagram-connector" type="inbound">
 	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.2.0"/>
+	<transport uri="com.esri.geoevent.transport.inbound/Instagram/10.2.0" />
 	<defaultName>instagram-in</defaultName>
 	<description>Connects to the public Instagram API and receives photo feeds.</description>
 	<properties>
@@ -30,12 +31,10 @@
 			<property default="Instagram" label="GeoEvent Definition Name" name="ExistingGeoEventDefinitionName" source="adapter"/>
 		</hidden>
 		<shown>
-	        <property name="access_token" label="Access Token" source="transport" />
-	        <property name="mediatype" label="Media Type" source="transport" />
-	        <property name="tag" label="Tag" source="transport" />
-	        <property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
+			<property name="access_token" label="Access Token" source="transport" />
+			<property name="mediatype" label="Media Type" source="transport" />
+			<property name="tag" label="Tag" source="transport" />
+			<property default="5" label="Frequency (in seconds)" name="frequency" source="transport"/>
 		</shown>
 	</properties>
-
-	<transport uri="com.esri.geoevent.transport/Instagram/10.2.0" />
 </connectorDefinition>

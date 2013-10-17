@@ -1,4 +1,4 @@
-<adapter name="Instagram" label="Instagram Inbound Adapter" domain="com.esri.ges.adapter.inbound" type="inbound">
+<adapter name="Instagram" label="Instagram Inbound Adapter" domain="com.esri.geoevent.adapter.inbound" type="inbound">
 	<description>This adapter is capable of receiving/parsing Instagram data in the JSON format.</description>
 	<geoEventDefinitions>
 		<geoEventDefinition name="Instagram">
@@ -166,7 +166,7 @@
 						<name>GEOMETRY</name>
 					</fieldDefinitionTag>
 				</fieldDefinition>
-										
+
 			</fieldDefinitions>
 
 		</geoEventDefinition>
