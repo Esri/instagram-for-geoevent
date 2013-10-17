@@ -15,10 +15,10 @@
 			<property default="GET" label="HTTP Method" name="httpMethod" source="transport"/>
 			<property label="Post body MIME Type" name="postContentType" source="transport"/>
 			<property default="false" label="Use Long Polling" name="useLongPolling" source="transport"/>
-			<property default="" label="X Geometry Field" name="XGeometryField" source="adapter"/>
-			<property default="" label="Y Geometry Field" name="YGeometryField" source="adapter"/>
+			<property default="location.longitude" label="X Geometry Field" name="XGeometryField" source="adapter"/>
+			<property default="location.latitude" label="Y Geometry Field" name="YGeometryField" source="adapter"/>
 			<property default="" label="Z Geometry Field" name="ZGeometryField" source="adapter"/>
-			<property default="false" label="Construct Geometry From Fields" name="BuildGeometryFromFields" source="adapter"/>
+			<property default="true" label="Construct Geometry From Fields" name="BuildGeometryFromFields" source="adapter"/>
 			<property default="data" label="JSON Object Name" name="JsonObjectName" source="adapter"/>
 			<property default="InstagramDef" label="GeoEvent Definition Name (New)" name="NewGeoEventDefinitionName" source="adapter"/>			
 			<property default="false" label="Create GeoEvent Definition" name="CreateGeoEventDefinition" source="adapter"/>			
