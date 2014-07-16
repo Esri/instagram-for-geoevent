@@ -134,7 +134,7 @@ public class InstagramInboundTransport extends HttpInboundTransport
     }
     
     clientUrl += "?access_token=" + accessToken;
-    logger.debug("clientUrl="+clientUrl);
+    logger.debug("clientUrl="+clientUrl+" my better debug statemennt.");
   }
 
   public static void consoleDebugPrintLn(String msg)
