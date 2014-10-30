@@ -31,14 +31,14 @@ import com.esri.ges.transport.util.XmlTransportDefinition;
 
 public class InstagramInboundTransportService extends HttpInboundTransportService
 {
-  public InstagramInboundTransportService()
-  {
-    super();
-    definition = new XmlTransportDefinition(getResourceAsStream("instagram-inboundtransport-definition.xml"), super.definition);
-  }
+	public InstagramInboundTransportService()
+	{
+		super();
+		definition = new XmlTransportDefinition(getResourceAsStream("instagram-inboundtransport-definition.xml"), super.definition);
+	}
 
-  public Transport createTransport() throws ComponentException
-  {
-    return new InstagramInboundTransport(definition);
-  }
+	public Transport createTransport() throws ComponentException
+	{
+		return new InstagramInboundTransport(definition);
+	}
 }

@@ -26,22 +26,21 @@ package com.esri.geoevent.adapter.instagram;
 
 import java.nio.ByteBuffer;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import com.esri.ges.adapter.AdapterDefinition;
 import com.esri.ges.adapter.InboundAdapterBase;
 import com.esri.ges.core.component.ComponentException;
 import com.esri.ges.core.geoevent.GeoEvent;
+import com.esri.ges.framework.i18n.BundleLogger;
+import com.esri.ges.framework.i18n.BundleLoggerFactory;
 
 public class InstagramAdapter extends InboundAdapterBase
 {
-  private static final Log LOG = LogFactory.getLog(InstagramAdapter.class);
+  private static final BundleLogger LOGGER = BundleLoggerFactory.getLogger(InstagramAdapter.class);
 
   public InstagramAdapter(AdapterDefinition definition) throws ComponentException
   {
     super(definition);
-    LOG.debug("Instagram Status Adapter created");
+    LOGGER.debug("Instagram Status Adapter created");
   }
 
   public static void consoleDebugPrintLn(String msg)

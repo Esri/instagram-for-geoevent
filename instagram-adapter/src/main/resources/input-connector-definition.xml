@@ -1,9 +1,9 @@
-<connectorDefinition label="Receive Instagram feed"
+<connectorDefinition label="${com.esri.geoevent.adapter.instagram-adapter.CONNECTOR_LABEL}"
 	name="receive-instagram-connector" type="inbound">
-	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.2.0"/>
-	<transport uri="com.esri.geoevent.transport.inbound/Instagram/10.2.0" />
+	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.3.0"/>
+	<transport uri="com.esri.geoevent.transport.inbound/Instagram/10.3.0" />
 	<defaultName>instagram-in</defaultName>
-	<description>Connects to the public Instagram API and receives photo feeds.</description>
+	<description>${com.esri.geoevent.adapter.instagram-adapter.CONNECTOR_DESC}</description>
 	<properties>
 		<hidden>
 			<property default="" label="Well Known Text Geometry Field" name="WKTextGeometryField" source="adapter"/>

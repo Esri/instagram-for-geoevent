@@ -20,7 +20,7 @@
   Redlands, California, USA 92373
 
   email: contracts@esri.com
-*/
+ */
 
 package com.esri.geoevent.adapter.instagram;
 
@@ -33,25 +33,25 @@ import com.esri.ges.core.component.ComponentException;
 
 public class InstagramAdapterService extends AdapterServiceBase
 {
-  public InstagramAdapterService()
-  {
-    XmlAdapterDefinition xmlAdapterDefinition = new XmlAdapterDefinition(getResourceAsStream("adapter-definition.xml"));
-    try
-    {
-      xmlAdapterDefinition.loadConnector(getResourceAsStream("input-connector-definition.xml"));
-    }
-    catch (JAXBException e)
-    {
-      throw new RuntimeException(e);
-    }
-    definition = xmlAdapterDefinition;
+	public InstagramAdapterService()
+	{
+		XmlAdapterDefinition xmlAdapterDefinition = new XmlAdapterDefinition(getResourceAsStream("adapter-definition.xml"));
+		try
+		{
+			xmlAdapterDefinition.loadConnector(getResourceAsStream("input-connector-definition.xml"));
+		}
+		catch (JAXBException e)
+		{
+			throw new RuntimeException(e);
+		}
+		definition = xmlAdapterDefinition;
 
-  }
+	}
 
-  @Override
-  public Adapter createAdapter() throws ComponentException
-  {
-    return null;// new InstagramAdapter(definition);
-  }
+	@Override
+	public Adapter createAdapter() throws ComponentException
+	{
+		return new InstagramAdapter(definition);
+	}
 
 }
