@@ -22,16 +22,7 @@
 		<module>instagram-adapter</module>
 		<module>instagram-transport</module>
 	</modules>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>commons-logging</groupId>
-				<artifactId>commons-logging</artifactId>
-				<version>1.1.1</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.esri.geoevent.sdk</groupId>

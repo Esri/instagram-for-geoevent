@@ -11,12 +11,6 @@
 	<artifactId>instagram-adapter</artifactId>
 	<name>Esri :: GeoEvent :: Adapter :: Instagram</name>
 	<packaging>bundle</packaging>
-	<dependencies>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-		</dependency>
-	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
