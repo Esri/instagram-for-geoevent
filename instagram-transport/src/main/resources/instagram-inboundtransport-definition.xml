@@ -5,9 +5,9 @@
 			<propertyDefinition propertyName="access_token" label="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_ACCESS_TOKEN_LBL}" description="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_ACCESS_TOKEN_DESC}" propertyType="Password" mandatory="true"  readOnly="false" defaultValue=""/>
 			<propertyDefinition propertyName="mediatype" lable="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_MEDIA_TYPE_LBL}" description="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_MEDIA_TYPE_DESC}" propertyType="String" mandatory="true" readOnly="false" defaultValue="Popular Media">
 				<allowedValues>
-					<value>Popular Media</value>
-					<value>My Media</value>
-					<value>Tagged Media</value>
+					<value label="Popular Media">Popular Media</value>
+					<value label="My Media">My Media</value>
+					<value label="Tagged Media">Tagged Media</value>
 				</allowedValues>
 		</propertyDefinition>
 		<propertyDefinition propertyName="tag" label="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_TAG_LBL}" description="${com.esri.geoevent.transport.instagram-transport.TRANSPORT_IN_TAG_DESC}" propertyType="String" mandatory="false" readOnly="false" dependsOn="mediatype=Tagged Media"/>
