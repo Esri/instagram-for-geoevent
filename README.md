@@ -1,6 +1,6 @@
 # instagram-for-geoevent
 
-ArcGIS 10.3.x GeoEvent Extension Sample Instagram Inbound Connector for receiving Instagram feeds.
+ArcGIS 10.3 GeoEvent Extension sample Instagram Input Connector for receiving Instagram feeds.
 
 ![App](instagram-for-geoevent.png?raw=true)
 
@@ -28,7 +28,7 @@ Installing the built jar files:
 ## Resources
 
 * [Download the connector's tutorial](http://www.arcgis.com/home/item.html?id=4e33fdcd50f8493286973d412c6c73ba) from the ArcGIS GeoEvent Extension Gallery
-* [ArcGIS GeoEvent Extension for Server Resource Center](http://links.esri.com/geoevent)
+* [ArcGIS GeoEvent Extension for Server Resources](http://links.esri.com/geoevent)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [twitter@esri](http://twitter.com/esri)
 
