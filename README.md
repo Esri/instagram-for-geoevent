@@ -1,6 +1,6 @@
 # instagram-for-geoevent
 
-ArcGIS 10.3 GeoEvent Extension sample Instagram Input Connector for receiving Instagram feeds.
+ArcGIS 10.3 GeoEvent Extension for Server sample Instagram Input Connector for receiving Instagram feeds.
 
 ![App](instagram-for-geoevent.png?raw=true)
 
