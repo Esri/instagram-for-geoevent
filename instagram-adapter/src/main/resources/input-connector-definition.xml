@@ -1,7 +1,7 @@
 <connectorDefinition label="${com.esri.geoevent.adapter.instagram-adapter.CONNECTOR_LABEL}"
 	name="receive-instagram-connector" type="inbound">
-	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.3.0"/>
-	<transport uri="com.esri.geoevent.transport.inbound/Instagram/10.3.0" />
+	<adapter uri="com.esri.ges.adapter.inbound/Generic-JSON/10.4.0"/>
+	<transport uri="com.esri.geoevent.transport.inbound/Instagram/10.4.0" />
 	<defaultName>instagram-in</defaultName>
 	<description>${com.esri.geoevent.adapter.instagram-adapter.CONNECTOR_DESC}</description>
 	<properties>
