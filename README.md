@@ -1,4 +1,5 @@
 # instagram-for-geoevent
+**This item has been deprecated due to age. Requests for a new version should be directed to geoevent@esri.com.**
 
 ArcGIS GeoEvent Server sample Instagram input connector for receiving Instagram feeds.
 
